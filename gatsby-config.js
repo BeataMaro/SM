@@ -1,6 +1,6 @@
 // Initialize dotenv
 require("dotenv").config({
-  path: `.env`,
+  path: `.env.${process.env.NODE_ENV}` || `.env`,
 })
 
 const config = require("gatsby-plugin-config").default
@@ -36,6 +36,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    // using env variable without GATSBY_ prefix
     {
       resolve: `gatsby-plugin-env-variables`,
       options: {

@@ -9,7 +9,7 @@ const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
     <h1>Hi people {process.env.GATSBY_API_KEY}</h1>
-    {/* env variable without GATSBY_ prefix - nie działa */}
+
     <h2>Hi people {process.env.MY_ENV}</h2>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
