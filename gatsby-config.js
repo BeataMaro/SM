@@ -1,6 +1,13 @@
+// Initialize dotenv
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`, // or '.env'
+})
+
+const config = require("gatsby-plugin-config").default
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `${config.MY_ENV} Gatsby Default Starter `,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
