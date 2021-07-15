@@ -7,10 +7,59 @@ const config = require("gatsby-plugin-config").default
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter `,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `SelfMAX`,
+    description:
+      "Zadaszenia tarasowe, carporty, pergole, ogrody zimowe. Szybka realizacja, 10-letnia gwarancja, trwałość i estetyka.",
+    copyright: "U+00A9 2021 | Beata Maro",
+    contact: "beata.maro@yahoo.com",
+    author: "Beata Maro",
+    menuLinks: [
+      {
+        name: `O nas`,
+        link: `/about`,
+        submenu: [],
+      },
+      {
+        name: `Produkty`,
+        link: `/products`,
+        submenu: [
+          {
+            name: `Zadaszenia z poliweglanu`,
+            link: `/poliweglan`,
+          },
+          {
+            name: `Carporty`,
+            link: `/carporty`,
+          },
+          {
+            name: `Dachy rzymskie`,
+            link: `/dachy-rzymskie`,
+          },
+          {
+            name: `Lamele`,
+            link: `/lamele`,
+          },
+          {
+            name: `Ogrody zimowe`,
+            link: `/ogrody-zimowe`,
+          },
+          {
+            name: `Zabudowa`,
+            link: `/zabudowa`,
+          },
+        ],
+      },
+      {
+        name: `Realizacje`,
+        link: `/projects`,
+        submenu: [],
+      },
+      {
+        name: `Kontakt`,
+        link: `/contact`,
+        submenu: [],
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
