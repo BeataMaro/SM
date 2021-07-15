@@ -1,0 +1,9 @@
+{
+  "forms": {
+    "ContactSelfMAX": {
+      "name": "ContactSelfMAX",
+      "actions": [{ "type": "email", "to": "beata.maro@yahoo.com" }],
+      "fields": {"email": {"required": true, "type": "email"}}
+    }
+  }
+}
