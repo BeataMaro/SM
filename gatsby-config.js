@@ -7,7 +7,7 @@ const config = require("gatsby-plugin-config").default
 
 module.exports = {
   siteMetadata: {
-    title: `${config.MY_ENV} Gatsby Default Starter `,
+    title: `Gatsby Default Starter `,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
@@ -22,6 +22,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/src/assets/`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -42,9 +49,26 @@ module.exports = {
     {
       resolve: `gatsby-plugin-env-variables`,
       options: {
-        allowList: ["MY_ENV"],
+        allowList: ["MY_ENV", "GRAPHCMS_ENDPOINT", "GRAPHCMS_TOKEN"],
       },
     },
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "SELF_MAX",
+        fieldName: "self_max",
+        url: config.GRAPHCMS_ENDPOINT,
+      },
+    },
+
+    // {
+    //   resolve: "gatsby-source-graphcms",
+    //   options: {
+    //     endpoint: config.GRAPHCMS_ENDPOINT,
+    //     token: config.GRAPHCMS_TOKEN,
+    //     downloadLocalImages: true,
+    //   },
+    // },
     `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
