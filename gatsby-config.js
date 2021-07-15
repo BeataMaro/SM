@@ -56,8 +56,8 @@ module.exports = {
       resolve: "gatsby-source-graphql",
       options: {
         typeName: "SELFMAX",
-        fieldName: "self_max",
-        url: process.env.GRAPHCMS_ENDPOINT,
+        fieldName: "selfmax",
+        url: config.GRAPHCMS_ENDPOINT,
       },
     },
 
