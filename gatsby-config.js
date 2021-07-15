@@ -52,14 +52,14 @@ module.exports = {
         allowList: ["MY_ENV", "GRAPHCMS_ENDPOINT", "GRAPHCMS_TOKEN"],
       },
     },
-    {
-      resolve: "gatsby-source-graphql",
-      options: {
-        typeName: "SELFMAX",
-        fieldName: "selfmax",
-        url: process.env.GRAPHCMS_ENDPOINT,
-      },
-    },
+    // {
+    //   resolve: "gatsby-source-graphql",
+    //   options: {
+    //     typeName: "SELFMAX",
+    //     fieldName: "selfmax",
+    //     url: process.env.GRAPHCMS_ENDPOINT,
+    //   },
+    // },
 
     // {
     //   resolve: "gatsby-source-graphcms",
