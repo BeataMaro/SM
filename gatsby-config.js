@@ -57,7 +57,7 @@ module.exports = {
       options: {
         typeName: "SELFMAX",
         fieldName: "selfmax",
-        url: config.GRAPHCMS_ENDPOINT,
+        url: process.env.GRAPHCMS_ENDPOINT,
       },
     },
 
