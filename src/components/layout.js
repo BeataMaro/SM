@@ -20,7 +20,6 @@ const StyledWrapper = styled.main`
   max-width: 1400px;
   min-height: 200vh;
   margin: 0 auto;
-  border: 1px solid red;
 `
 
 const Layout = ({ children }) => {
