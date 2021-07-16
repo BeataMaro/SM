@@ -8,4 +8,4 @@
 import "./src/styles/app.scss"
 import "./src/styles/GlobalStyles"
 import "./src/styles/Animation"
-import "./src/components/Form"
+import "./src/components/ContactForm"

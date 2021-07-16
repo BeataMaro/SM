@@ -1,5 +1,5 @@
 import React from "react"
-import ContactForm from "../components/Form"
+import ContactForm from "../components/ContactForm"
 import { FormspreeProvider } from "@formspree/react"
 
 import Layout from "../components/Layout"
