@@ -27,7 +27,7 @@ export const GlobalStyles = createGlobalStyle`
     body {
     line-height: 1.5;
     letter-spacing: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     background-color: #d2d8d6;  
   }
   ::selection {

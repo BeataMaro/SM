@@ -7,15 +7,21 @@
 
 import * as React from "react"
 import PropTypes from "prop-types"
-
 import { Normalize } from "styled-normalize"
+import styled from "styled-components"
 import { ThemeProvider } from "styled-components"
-
 import { GlobalStyles } from "../styles/GlobalStyles"
 import Theme from "../styles/Theme"
 
 import Navbar from "./Navbar"
 import Footer from "./Footer"
+
+const StyledWrapper = styled.main`
+  max-width: 1400px;
+  min-height: 70vh;
+  margin: 0 auto;
+  border: 1px solid red;
+`
 
 const Layout = ({ children }) => {
   return (
@@ -24,7 +30,7 @@ const Layout = ({ children }) => {
       <Normalize />
       <Navbar />
 
-      <main>{children}</main>
+      <StyledWrapper>{children}</StyledWrapper>
       <Footer />
     </ThemeProvider>
   )
