@@ -9,6 +9,3 @@
 import "./src/styles/app.scss"
 import "./src/styles/GlobalStyles"
 import "./src/styles/Animation"
-import "./src/components/ContactForm"
-import "./src/components/Seo"
-import "./src/components/Layout"
