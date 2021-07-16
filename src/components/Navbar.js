@@ -85,7 +85,7 @@ const Navbar = () => {
       </Toggle>
       {navbarOpen ? (
         <Navbox>
-          <NavbarLinks />
+          <NavbarLinks toggleMenu={setNavbarOpen} />
         </Navbox>
       ) : (
         <Navbox open>

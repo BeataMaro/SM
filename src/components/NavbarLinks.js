@@ -16,7 +16,7 @@ const StyledNavlist = styled.ul`
   }
 `
 
-const NavbarLinks = () => {
+const NavbarLinks = ({ toggleMenu }) => {
   const { site } = useStaticQuery(query)
 
   const menuLinks = site.siteMetadata.menuLinks
@@ -25,7 +25,11 @@ const NavbarLinks = () => {
     <StyledNavlist>
       {menuLinks.map(link => (
         <li key={link.name}>
-          <Link to={link.link} className="nav-item">
+          <Link
+            to={link.link}
+            className="nav-item"
+            onClick={() => toggleMenu(prev => !prev)}
+          >
             {link.name}
           </Link>
         </li>
