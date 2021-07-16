@@ -2,12 +2,11 @@ import React from "react"
 import ContactForm from "../components/ContactForm"
 import { FormspreeProvider } from "@formspree/react"
 
-import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 
 const contact = () => {
   return (
-    <Layout>
+    <>
       <Seo title="Kontakt" />
       <section>
         <h2>Kontakt</h2>
@@ -26,7 +25,7 @@ const contact = () => {
           Mapy Googla: Niedersulzerstraße 2, 2225 Loidesthal, Austria
         </article>
       </section>
-    </Layout>
+    </>
   )
 }
 

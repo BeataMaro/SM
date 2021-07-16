@@ -1,11 +1,10 @@
 import React from "react"
 
-import Layout from "../../components/Layout"
 import Seo from "../../components/Seo"
 
 const lamele = () => {
   return (
-    <Layout>
+    <>
       <Seo title="Lamele" />
       <section>
         <h2>Lamele</h2>
@@ -17,7 +16,7 @@ const lamele = () => {
           gdy pogoda się pogorszy.{" "}
         </p>
       </section>
-    </Layout>
+    </>
   )
 }
 

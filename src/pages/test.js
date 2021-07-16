@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import { FormspreeProvider } from "@formspree/react"
 import ContactForm from "../components/ContactForm"
-import Layout from "../components/Layout"
+import Layout from "../components/layout"
 import Seo from "../components/Seo"
 
 const StyledHero = styled.section`

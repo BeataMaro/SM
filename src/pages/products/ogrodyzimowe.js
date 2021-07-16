@@ -1,11 +1,10 @@
 import React from "react"
 
-import Layout from "../../components/Layout"
 import Seo from "../../components/Seo"
 
 const ogrodyzimowe = () => {
   return (
-    <Layout>
+    <>
       <Seo title="ogrody zimowe" />
       <section>
         <h2>Ogrody zimowe</h2>
@@ -16,7 +15,7 @@ const ogrodyzimowe = () => {
           nawet wtedy, gdy aura nie zachęca do wychodzenia na zewnątrz.
         </p>
       </section>
-    </Layout>
+    </>
   )
 }
 

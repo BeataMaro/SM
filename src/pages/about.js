@@ -1,11 +1,10 @@
 import React from "react"
 
-import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 
 const about = () => {
   return (
-    <Layout>
+    <>
       <Seo title="o nas" />
       <section>
         <h2>O nas</h2>
@@ -19,7 +18,7 @@ const about = () => {
           usług o bezkompromisowej jakości.
         </p>
       </section>
-    </Layout>
+    </>
   )
 }
 

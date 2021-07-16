@@ -1,11 +1,10 @@
 import React from "react"
 
-import Layout from "../../components/Layout"
 import Seo from "../../components/Seo"
 
 const poliweglan = () => {
   return (
-    <Layout>
+    <>
       <Seo title="Zadaszenia z Poliwęglanu" />
       <section>
         <h2>Zadaszenia z poliwęglanu</h2>
@@ -17,7 +16,7 @@ const poliweglan = () => {
           kosztami sprawia, że jest to najczęściej wybierane rozwiązanie.
         </p>
       </section>
-    </Layout>
+    </>
   )
 }
 
