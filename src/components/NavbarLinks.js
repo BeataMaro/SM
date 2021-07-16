@@ -7,6 +7,7 @@ const StyledNavlist = styled.ul`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  list-style: none;
 
   li a {
     color: white;
