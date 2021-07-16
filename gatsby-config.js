@@ -51,11 +51,6 @@ module.exports = {
         ],
       },
       {
-        name: `Realizacje`,
-        link: `/projects`,
-        submenu: [],
-      },
-      {
         name: `Kontakt`,
         link: `/contact`,
         submenu: [],

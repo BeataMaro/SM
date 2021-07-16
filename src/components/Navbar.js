@@ -8,7 +8,7 @@ const StyledNavigation = styled.nav`
   background-color: black;
 `
 
-const Navigation = () => {
+const Navbar = () => {
   return (
     <StyledNavigation>
       <NavbarLinks />
@@ -16,4 +16,4 @@ const Navigation = () => {
   )
 }
 
-export default Navigation
+export default Navbar
