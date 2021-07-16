@@ -2,7 +2,7 @@ import React from "react"
 import ContactForm from "../components/ContactForm"
 import { FormspreeProvider } from "@formspree/react"
 
-import Seo from "../components/Seo"
+import Seo from "../components/seo"
 
 const contact = () => {
   return (

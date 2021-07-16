@@ -5,15 +5,15 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import { FormspreeProvider } from "@formspree/react"
 import ContactForm from "../components/ContactForm"
-import Layout from "../components/layout"
-import Seo from "../components/Seo"
+
+import Seo from "../components/seo"
 
 const StyledHero = styled.section`
   background-color: slateblue;
 `
 
 const IndexPage = () => (
-  <Layout>
+  <>
     <Seo title="Home" />
     <StyledHero>
       <h1>Hi people {process.env.GATSBY_API_KEY}</h1>
@@ -36,7 +36,7 @@ const IndexPage = () => (
     <p>
       <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
     </p>
-  </Layout>
+  </>
 )
 
 export default IndexPage
