@@ -1,11 +1,10 @@
 import React from "react"
 
-import Layout from "../../components/Layout"
 import Seo from "../../components/Seo"
 
 const dachyrzymskie = () => {
   return (
-    <Layout>
+    <>
       <Seo title="Dachy Rzymskie" />
       <section>
         <h2>Dachy rzymskie</h2>
@@ -16,7 +15,7 @@ const dachyrzymskie = () => {
           tworzy na twoim tarasie przytulny, wakacyjny klimat.
         </p>
       </section>
-    </Layout>
+    </>
   )
 }
 
