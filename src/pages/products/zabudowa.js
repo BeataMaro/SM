@@ -1,13 +1,17 @@
 import React from "react"
+
+import Layout from "../../components/Layout"
 import Seo from "../../components/Seo"
 
 const zabudowa = () => {
   return (
-    <section>
+    <Layout>
       <Seo title="Zabudowa" />
-      <h2>Zadaszenia z poliwęglanu</h2>
-      <p></p>
-    </section>
+      <section>
+        <h2>Zadaszenia z poliwęglanu</h2>
+        <p></p>
+      </section>
+    </Layout>
   )
 }
 

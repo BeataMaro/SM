@@ -8,8 +8,8 @@ import Seo from "../components/Seo"
 const contact = () => {
   return (
     <Layout>
+      <Seo title="Kontakt" />
       <section>
-        <Seo title="Kontakt" />
         <h2>Kontakt</h2>
         <article>
           <FormspreeProvider project="1723153946022771743">

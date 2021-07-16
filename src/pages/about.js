@@ -6,8 +6,8 @@ import Seo from "../components/Seo"
 const about = () => {
   return (
     <Layout>
+      <Seo title="o nas" />
       <section>
-        <Seo title="o nas" />
         <h2>O nas</h2>
         <p>
           Selfmax doskonali się w montażu zadaszeń aluminiowych od 2001 roku. Ze

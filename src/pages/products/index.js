@@ -5,8 +5,8 @@ import Seo from "../../components/Seo"
 const index = () => {
   return (
     <Layout>
+      <Seo title="Produkty" />
       <section>
-        <Seo title="Produkty" />
         <h2>Nasza oferta</h2>
       </section>
     </Layout>
