@@ -23,6 +23,7 @@
     "gatsby-source-filesystem": "^3.9.0",
     "gatsby-source-graphcms": "^2.6.0",
     "gatsby-source-graphql": "^3.9.0",
+    "gatsby-transformer-remark": "^4.6.0",
     "gatsby-transformer-sharp": "^3.9.0",
     "gsap": "^3.7.1",
     "prop-types": "^15.7.2",

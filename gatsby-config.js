@@ -1,9 +1,10 @@
 // Initialize dotenv
+
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}` || `.env`,
 })
 
-const config = require("gatsby-plugin-config").default
+// const config = require("gatsby-plugin-config").default
 
 module.exports = {
   siteMetadata: {
@@ -80,8 +81,16 @@ module.exports = {
         path: `${__dirname}/src/assets/`,
       },
     },
-    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `products`,
+        path: `${__dirname}/src/products/`,
+      },
+    },
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sass`,
     // {
@@ -97,12 +106,12 @@ module.exports = {
     // },
     // },
     // using env variable without GATSBY_ prefix
-    {
-      resolve: `gatsby-plugin-env-variables`,
-      options: {
-        allowList: ["MY_ENV", "GRAPHCMS_ENDPOINT", "GRAPHCMS_TOKEN"],
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-env-variables`,
+    //   options: {
+    //     allowList: ["MY_ENV", "GRAPHCMS_ENDPOINT", "GRAPHCMS_TOKEN"],
+    //   },
+    // },
     // {
     //   resolve: "gatsby-source-graphql",
     //   options: {
