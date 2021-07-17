@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react"
 import PropTypes from "prop-types"
+import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import { animationMoveY } from "../styles/Animation"
 
@@ -33,6 +34,10 @@ const Header = ({ siteTitle }) => {
         dostarczyć materiały do samodzielnego montażu zadaszenia wraz z
         instruktażem.
       </p>
+      <StaticImage
+        src="../assets/jonas-jaeken-yellow-car-unsplash.jpg"
+        alt=""
+      />
     </header>
   )
 }
