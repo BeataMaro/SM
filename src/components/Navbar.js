@@ -90,7 +90,7 @@ const Navbar = () => {
       ) : (
         <Navbox open>
           <ModalStyles />
-          <NavbarLinks />
+          <NavbarLinks toggleMenu={setNavbarOpen} />
         </Navbox>
       )}
     </StyledNavigation>
