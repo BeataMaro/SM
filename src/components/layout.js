@@ -18,7 +18,7 @@ import Footer from "./Footer"
 
 const StyledWrapper = styled.main`
   max-width: 1400px;
-  min-height: 200vh;
+  min-height: 70vh;
   margin: 0 auto;
 `
 

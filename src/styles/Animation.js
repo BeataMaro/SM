@@ -26,7 +26,7 @@ export const animationMoveY = (el, toTop) => {
     )
 }
 
-export const animationOpacity = (el, durationTime) => {
+export const animationFade = (el, durationTime) => {
   gsap.fromTo(
     el,
     { autoAlpha: 0, duration: `${durationTime}` },

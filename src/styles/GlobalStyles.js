@@ -38,6 +38,11 @@ export const GlobalStyles = createGlobalStyle`
  ::placeholder {
     color: ${({ theme }) => theme.colors.greenGrey};
   }
+  section {
+    border: 2px solid orange;
+    padding: 2rem;
+    margin-top: 1rem;
+  }
 
 a {
   text-decoration: none;
