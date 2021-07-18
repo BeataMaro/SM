@@ -13,7 +13,7 @@ import { ThemeProvider } from "styled-components"
 import { GlobalStyles } from "../styles/GlobalStyles"
 import Theme from "../styles/Theme"
 
-import Navbar from "./Navbar"
+import Navbar from "./Navbar/Navbar"
 import Footer from "./Footer"
 
 const StyledWrapper = styled.main`

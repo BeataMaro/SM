@@ -1,17 +1,12 @@
-import React, { useState } from "react"
 import styled, { createGlobalStyle } from "styled-components"
 
-import Logo from "./Logo"
-import Hamburger from "./Hamburger"
-import NavbarLinks from "./NavbarLinks"
-
-const ModalStyles = createGlobalStyle`
+export const ModalStyles = createGlobalStyle`
   body {
     overflow-y: scroll;
   }
 `
 
-const StyledNavigation = styled.nav`
+export const StyledNavigation = styled.nav`
   position: sticky;
   top: 0;
   width: 100%;
@@ -37,7 +32,7 @@ const StyledNavigation = styled.nav`
   }
 `
 //hamburger icon
-const Toggle = styled.div`
+export const Toggle = styled.div`
   display: none;
   height: 100%;
   cursor: pointer;
@@ -47,7 +42,7 @@ const Toggle = styled.div`
     display: flex;
   }
 `
-const Navbox = styled.div`
+export const Navbox = styled.div`
   display: flex;
   height: 100%;
   align-items: center;
@@ -71,27 +66,3 @@ const Navbox = styled.div`
     top: -100%;
   }
 `
-
-const Navbar = () => {
-  const [navbarOpen, setNavbarOpen] = useState(false)
-  return (
-    <StyledNavigation>
-      <Logo />
-      <Toggle onClick={() => setNavbarOpen(prev => !prev)}>
-        {navbarOpen ? <Hamburger open /> : <Hamburger />}
-      </Toggle>
-      {navbarOpen ? (
-        <Navbox>
-          <NavbarLinks toggleMenu={setNavbarOpen} />
-        </Navbox>
-      ) : (
-        <Navbox open>
-          <ModalStyles />
-          <NavbarLinks toggleMenu={setNavbarOpen} />
-        </Navbox>
-      )}
-    </StyledNavigation>
-  )
-}
-
-export default Navbar
