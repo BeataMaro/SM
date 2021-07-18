@@ -7,7 +7,7 @@ const zabudowa = () => {
     <>
       <Seo title="Zabudowa" />
       <section>
-        <h2>Zadaszenia z poliwęglanu</h2>
+        <h2>Zabudowa</h2>
         <p></p>
       </section>
     </>

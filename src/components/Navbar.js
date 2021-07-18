@@ -12,9 +12,6 @@ const ModalStyles = createGlobalStyle`
 `
 
 const StyledNavigation = styled.nav`
-  padding: 1rem;
-  background-color: black;
-
   position: sticky;
   top: 0;
   width: 100%;
@@ -35,7 +32,7 @@ const StyledNavigation = styled.nav`
     top: 0;
     left: 0;
     right: 0;
-    left: 0;
+    bottom: 0;
     padding: 0 2rem;
   }
 `

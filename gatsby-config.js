@@ -16,17 +16,12 @@ module.exports = {
     author: "Beata Maro",
     menuLinks: [
       {
-        name: `O nas`,
-        link: `/about`,
-        submenu: [],
-      },
-      {
         name: `Produkty`,
         link: `/products`,
         submenu: [
           {
             name: `Zadaszenia z poliweglanu`,
-            link: `/poliweglan`,
+            link: `/zadaszeniazpoliweglanu`,
           },
           {
             name: `Carporty`,
@@ -34,7 +29,7 @@ module.exports = {
           },
           {
             name: `Dachy rzymskie`,
-            link: `/dachy-rzymskie`,
+            link: `/dachyrzymskie`,
           },
           {
             name: `Lamele`,
@@ -42,7 +37,7 @@ module.exports = {
           },
           {
             name: `Ogrody zimowe`,
-            link: `/ogrody-zimowe`,
+            link: `/ogrodyzimowe`,
           },
           {
             name: `Zabudowa`,
@@ -50,6 +45,12 @@ module.exports = {
           },
         ],
       },
+      {
+        name: `O nas`,
+        link: `/about`,
+        submenu: [],
+      },
+
       {
         name: `Kontakt`,
         link: `/contact`,

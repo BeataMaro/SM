@@ -60,31 +60,13 @@ textarea {
 .logo {
 
   max-width: 100%;
-  width: 7rem;
+  width: 6rem;
   max-height: 15vh;
 
   @media (max-width: 768px) {
-    width: 6rem;
+    width: 5.5rem;
   }
   
-}
-
-.nav-item {
-  width: 100%;
-  height: 100%;
-   color: ${({ theme }) => theme.colors.grey};
-  letter-spacing: 0.3px;
-  white-space: nowrap;
-  transition: all 200ms ease-in;
-
-  @media (max-width: 768px) {
-   
-    text-align: center;
-    text-transform: capitalize;
-    padding: 1rem 0;
-    font-size: 1.5rem;
-    z-index: 20;
-  }
 }
 
 .image {
