@@ -31,7 +31,7 @@ export const GlobalStyles = createGlobalStyle`
     background-color: #d2d8d6;  
   }
   ::selection {
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.grey};
   color: ${({ theme }) => theme.colors.green};
 }
 
@@ -43,7 +43,9 @@ export const GlobalStyles = createGlobalStyle`
     padding: 2rem;
     margin-top: 1rem;
   }
-
+ul {
+  list-style: none;
+}
 a {
   text-decoration: none;
 
@@ -76,10 +78,6 @@ textarea {
 .static-gif {
 max-width: 100%;
 width: 600px;
-}
-
-.active-link {
-  color: slateblue;
 }
 
 `

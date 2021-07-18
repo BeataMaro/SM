@@ -7,53 +7,45 @@ const StyledNavlist = styled.ul`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  list-style: none;
 
-  .nav-item {
-    width: 100%;
-    height: 100%;
-    color: ${({ theme }) => theme.colors.grey};
-    letter-spacing: 0.3px;
-    white-space: nowrap;
-    transition: all 200ms ease-in;
-
-    @media (max-width: 768px) {
-      text-align: center;
-      text-transform: capitalize;
-      padding: 1rem 0;
-      font-size: 1.5rem;
-      z-index: 20;
-    }
-  }
-
-  li a {
-    color: white;
-    margin-left: 1rem;
-    text-transform: uppercase;
-  }
   li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    color: ${({ theme }) => theme.colors.black};
     position: relative;
+    width: 100%;
     transition-duration: 0.5s;
     border-bottom: 0.4px solid transparent;
 
     &:hover {
       cursor: pointer;
-
-      & > a {
+      & > .nav-item:not(.active-link) {
         color: ${({ theme }) => theme.colors.lightGrey};
       }
       @media (max-width: 768px) {
+        padding: 1rem;
         border-bottom: 0.4px solid ${({ theme }) => theme.colors.grey};
       }
     }
+    .nav-item {
+      color: ${({ theme }) => theme.colors.grey};
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+      transition: all 200ms ease-in;
 
+      @media (max-width: 768px) {
+        text-align: center;
+        text-transform: capitalize;
+        padding: 1rem 0;
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        z-index: 20;
+      }
+    }
+
+    .active-link {
+      color: slateblue;
+    }
+
+    /* submenu style */
     & > ul {
-      list-style: none;
       visibility: hidden;
       background-color: ${({ theme }) => theme.colors.black};
       color: ${({ theme }) => theme.colors.white};
@@ -69,14 +61,14 @@ const StyledNavlist = styled.ul`
       & li {
         transition: 0.5s ease;
         padding: 1rem;
-        & a {
+
+        .nav-item {
           display: block;
+          width: 100%;
         }
-        &:hover {
-          /* background-color: ${({ theme }) => theme.colors.lightGrey}; */
-          & a {
-            color: ${({ theme }) => theme.colors.lightGrey};
-          }
+
+        .active-link {
+          color: slateblue;
         }
       }
     }
@@ -85,14 +77,11 @@ const StyledNavlist = styled.ul`
       border-bottom: none;
       padding: 1rem;
 
-      &:hover > ul,
-      &:focus-within > ul {
+      /* &:focus-within > ul, */
+      &:hover > ul {
         visibility: visible;
         opacity: 1;
         display: block;
-        & li a {
-          width: 100%;
-        }
       }
     }
   }
@@ -116,6 +105,8 @@ const NavbarLinks = ({ toggleMenu }) => {
           <Link
             to={link.link}
             className="nav-item"
+            activeClassName="active-link"
+            products={`${link.name === "Produkty"}`}
             onClick={() => toggleMenu(prev => !prev)}
           >
             {link.name}
@@ -125,7 +116,11 @@ const NavbarLinks = ({ toggleMenu }) => {
             <ul aria-label="submenu">
               {submenu.map(sublink => (
                 <li key={sublink.name}>
-                  <Link to={`/products${sublink.link}`} className="nav-item">
+                  <Link
+                    to={`/products${sublink.link}`}
+                    className="nav-item"
+                    activeClassName="active-link"
+                  >
                     {sublink.name}
                   </Link>
                 </li>

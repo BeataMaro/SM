@@ -21,7 +21,7 @@ module.exports = {
         submenu: [
           {
             name: `Zadaszenia z poliweglanu`,
-            link: `/zadaszeniazpoliweglanu`,
+            link: `/poliweglan`,
           },
           {
             name: `Carporty`,
