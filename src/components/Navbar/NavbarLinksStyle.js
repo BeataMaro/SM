@@ -5,11 +5,19 @@ export const StyledNavlist = styled.ul`
   align-items: center;
   justify-content: flex-end;
 
+  /* @media (max-width: 768px) {
+    flex-direction: column;
+  } */
+
   li {
     position: relative;
     width: 100%;
     transition-duration: 0.5s;
     border-bottom: 0.4px solid transparent;
+
+    @media (max-width: 768px) {
+      padding: 2rem;
+    }
 
     &:hover {
       cursor: pointer;
@@ -17,7 +25,6 @@ export const StyledNavlist = styled.ul`
         color: ${({ theme }) => theme.colors.lightGrey};
       }
       @media (max-width: 768px) {
-        padding: 1rem;
         border-bottom: 0.4px solid ${({ theme }) => theme.colors.grey};
       }
     }
@@ -57,7 +64,7 @@ export const StyledNavlist = styled.ul`
 
       & li {
         transition: 0.5s ease;
-        padding: 1rem;
+        padding: 1.5rem;
 
         .nav-item {
           display: block;

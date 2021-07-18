@@ -8,18 +8,20 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Normalize } from "styled-normalize"
-import styled from "styled-components"
+
 import { ThemeProvider } from "styled-components"
 import { GlobalStyles } from "../styles/GlobalStyles"
 import Theme from "../styles/Theme"
 
 import Navbar from "./Navbar/Navbar"
 import Footer from "./Footer"
+import styled from "styled-components"
 
-const StyledWrapper = styled.main`
-  max-width: 1400px;
-  min-height: 70vh;
-  margin: 0 auto;
+const StyledWrapper = styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `
 
 const Layout = ({ children }) => {
@@ -27,10 +29,11 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={Theme}>
       <GlobalStyles />
       <Normalize />
-      <Navbar />
-
-      <StyledWrapper>{children}</StyledWrapper>
-      <Footer />
+      <StyledWrapper>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+      </StyledWrapper>
     </ThemeProvider>
   )
 }

@@ -18,17 +18,30 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   html {
+    
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: ${({ theme }) => theme.fonts.saira};
     font-size: 16px;
     color: '#1a202c';
   }
-    body {
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  /* #gatsby-focus-wrapper {
+  
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  } */
+  body {
+
     line-height: 1.5;
     letter-spacing: 0;
     overflow: hidden;
-    background-color: #d2d8d6;  
   }
   ::selection {
   background-color: ${({ theme }) => theme.colors.grey};
@@ -38,10 +51,15 @@ export const GlobalStyles = createGlobalStyle`
  ::placeholder {
     color: ${({ theme }) => theme.colors.greenGrey};
   }
+
   section {
-    border: 2px solid orange;
-    padding: 2rem;
-    margin-top: 1rem;
+  flex-grow: 1;
+  max-width: 1400px;
+  min-height: 70vh;
+  background-color: white;
+  box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  padding: 2rem;
   }
 ul {
   list-style: none;

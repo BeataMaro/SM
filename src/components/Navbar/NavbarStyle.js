@@ -10,13 +10,11 @@ export const StyledNavigation = styled.nav`
   position: sticky;
   top: 0;
   width: 100%;
-  margin: auto;
   padding: 0 1.5rem;
   height: 15vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   text-transform: uppercase;
   background-color: ${({ theme }) => theme.colors.black};
   z-index: 2;
@@ -44,24 +42,19 @@ export const Toggle = styled.div`
 `
 export const Navbox = styled.div`
   display: flex;
-  height: 100%;
   align-items: center;
   justify-content: center;
 
   @media (max-width: 768px) {
-    flex-direction: column;
     width: 100%;
     max-height: 100vh;
-    height: 100%;
-    justify-content: flex-start;
-    padding-top: 15vh;
-    transition: all 0.32s linear;
+    height: 40%;
+    transition: all 0.35s linear;
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     background-color: ${({ theme }) => theme.colors.black};
   }
-
   &[open] {
     top: -100%;
   }

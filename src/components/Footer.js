@@ -2,12 +2,12 @@ import React from "react"
 import styled from "styled-components"
 
 const StyledFooter = styled.footer`
-  align-self: flex-end;
   width: 100%;
   margin-top: auto;
   background-color: transparent;
   color: lightgray;
   padding: 1rem 3rem;
+  border: 1px solid black;
 
   & p {
     color: #bbb;
