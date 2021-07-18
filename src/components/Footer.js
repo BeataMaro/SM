@@ -7,7 +7,6 @@ const StyledFooter = styled.footer`
   background-color: transparent;
   color: lightgray;
   padding: 1rem 3rem;
-  border: 1px solid black;
 
   & p {
     color: #bbb;

@@ -36,6 +36,7 @@ const Header = ({ siteTitle }) => {
       </p>
       <StaticImage
         src="../assets/jonas-jaeken-yellow-car-unsplash.jpg"
+        className="image"
         alt=""
       />
     </header>

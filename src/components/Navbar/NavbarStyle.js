@@ -16,7 +16,7 @@ export const StyledNavigation = styled.nav`
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
-  background-color: ${({ theme }) => theme.colors.black};
+  background-color: ${({ theme }) => theme.colors.lightGrey};
   z-index: 2;
 
   @media (max-width: 768px) {

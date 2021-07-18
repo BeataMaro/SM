@@ -52,11 +52,11 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.colors.greenGrey};
   }
 
-  section {
-  flex-grow: 1;
+  section, header {
+  
   max-width: 1400px;
   min-height: 70vh;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.white};;
   box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.3);
   margin: 0 auto;
   padding: 2rem;
