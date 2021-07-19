@@ -11,12 +11,42 @@ import { animationMoveY } from "../styles/Animation"
 import Seo from "../components/seo"
 
 const StyledContactPage = styled.section`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
   svg {
-    /* background-color: grey; */
     color: black;
-    font-size: 2rem;
+    font-size: 1rem;
   }
+  article {
+    @media (max-width: 768px) {
+      grid-column: 1 / -1;
+    }
+
+    &:nth-of-type(1) {
+      border: 1px solid orange;
+    }
+    &:nth-of-type(2) {
+      border: 1px solid blue;
+
+      @media (min-width: 968px) {
+      }
+    }
+    &:nth-of-type(3) {
+      border: 1px solid yellow;
+    }
+  }
+
+  /* @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  } */
+`
+const StyledTitle = styled.h2`
+  width: 100%;
+  color: ${({ theme }) => theme.colors.lightGrey};
+  background-color: ${({ theme }) => theme.colors.grey};
+  padding: 2rem;
+  letter-spacing: 3px;
 `
 
 const Contact = () => {
@@ -28,36 +58,38 @@ const Contact = () => {
   return (
     <>
       <Seo title="Kontakt" />
-      <StyledContactPage ref={sectionRef}>
-        <h2>Kontakt</h2>
-        <article>
-          <FormspreeProvider project="1723153946022771743">
-            <ContactForm />
-          </FormspreeProvider>
-        </article>
-        <article>
-          <p>
-            <a
-              href="https://www.facebook.com/SefmaxPoska"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon icon={faFacebookF} />{" "}
-            </a>
-          </p>
-          <p>Dariusz Łakomski</p>
-          <p>
-            <FontAwesomeIcon icon={faPhone} />
-            +48 503 696 926
-          </p>
-          <p>
-            <FontAwesomeIcon icon={faEnvelope} /> dariusz@lakomski.pl
-          </p>
-        </article>
-        <article>
-          Mapy Googla: Niedersulzerstraße 2, 2225 Loidesthal, Austria
-        </article>
-      </StyledContactPage>
+      <section>
+        <StyledTitle>Kontakt</StyledTitle>
+        <StyledContactPage ref={sectionRef}>
+          <article>
+            <FormspreeProvider project="1723153946022771743">
+              <ContactForm />
+            </FormspreeProvider>
+          </article>
+          <article>
+            <p>
+              <a
+                href="https://www.facebook.com/SefmaxPoska"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon icon={faFacebookF} /> @selfMAX/Polska
+              </a>
+            </p>
+            <p>Dariusz Łakomski</p>
+            <p>
+              <FontAwesomeIcon icon={faPhone} />
+              +48 503 696 926
+            </p>
+            <p>
+              <FontAwesomeIcon icon={faEnvelope} /> dariusz@lakomski.pl
+            </p>
+          </article>
+          <article>
+            Mapy Googla: Niedersulzerstraße 2, 2225 Loidesthal, Austria
+          </article>
+        </StyledContactPage>
+      </section>
     </>
   )
 }

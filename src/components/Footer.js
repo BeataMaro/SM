@@ -9,7 +9,7 @@ const StyledFooter = styled.footer`
   padding: 1rem 3rem;
 
   & p {
-    color: #bbb;
+    color: ${({ theme }) => theme.colors.grey};
     line-height: 1;
   }
   & a {

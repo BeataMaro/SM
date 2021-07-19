@@ -10,7 +10,7 @@ export const Button = styled.button`
   border: 0.12em solid
     ${({ empty, theme }) =>
       empty ? theme.colors.greenGrey : theme.colors.black};
-  border-radius: 2.5px;
+
   font-weight: 400;
   text-transform: capitalize;
   text-align: center;

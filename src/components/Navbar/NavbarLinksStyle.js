@@ -16,7 +16,8 @@ export const StyledNavlist = styled.ul`
     border-bottom: 0.4px solid transparent;
 
     @media (max-width: 768px) {
-      padding: 2rem;
+      padding: 1rem;
+      font-size: 0.8rem;
     }
 
     &:hover {

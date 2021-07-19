@@ -56,8 +56,8 @@ export const GlobalStyles = createGlobalStyle`
   
   max-width: 1400px;
   min-height: 70vh;
-  background-color: ${({ theme }) => theme.colors.white};;
-  box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.3);
+  background-color: ${({ theme }) => theme.colors.white};
+  border: .5px solid ${({ theme }) => theme.colors.lightGrey};
   margin: 0 auto;
   padding: 2rem;
   }

@@ -11,12 +11,13 @@ export const StyledNavigation = styled.nav`
   top: 0;
   width: 100%;
   padding: 0 1.5rem;
-  height: 15vh;
+  height: 12vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
   background-color: ${({ theme }) => theme.colors.lightGrey};
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
   z-index: 2;
 
   @media (max-width: 768px) {
