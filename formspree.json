@@ -3,7 +3,12 @@
     "ContactSelfMAX": {
       "name": "ContactSelfMAX",
       "actions": [{ "type": "email", "to": "beata.maro@yahoo.com" }],
-      "fields": {"email": {"required": true, "type": "email"}}
+     "fields": {
+       "name": { "type": "text", "required": true },
+        "email": { "type": "email", "required": true },
+        "phone": { "type": "tel", "required": false},
+        "message": { "type": "text", "required": true }
+      }
     }
   }
 }
