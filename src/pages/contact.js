@@ -69,11 +69,11 @@ const Contact = () => {
           <article>
             <p>
               <a
-                href="https://www.facebook.com/SefmaxPoska"
+                href="https://www.facebook.com/SelfmaxPolska"
                 target="_blank"
                 rel="noreferrer"
               >
-                <FontAwesomeIcon icon={faFacebookF} /> @selfMAX/Polska
+                <FontAwesomeIcon icon={faFacebookF} /> @SelfmaxPolska
               </a>
             </p>
             <p>Dariusz Łakomski</p>
