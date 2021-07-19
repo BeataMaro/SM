@@ -6,7 +6,7 @@
      "fields": {
        "name": { "type": "text", "required": true },
         "email": { "type": "email", "required": true },
-        "phone": { "type": "tel", "required": false},
+        "phone": { "type": "numeric", "required": false},
         "message": { "type": "text", "required": true }
       }
     }

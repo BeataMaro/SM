@@ -20,7 +20,7 @@ const ContactForm = () => {
       <input id="email" type="email" name="email" />
       <ValidationError prefix="Email" field="email" errors={state.errors} />
       <label htmlFor="phone">Numer telefonu</label>
-      <input id="phone" type="tel" name="phone" />
+      <input id="phone" type="numeric" name="phone" />
       <ValidationError prefix="Phone" field="phone" errors={state.errors} />
       <label htmlFor="message">Wiadomość</label>
       <textarea id="message" name="message" placeholder="Proszę o kontakt." />
