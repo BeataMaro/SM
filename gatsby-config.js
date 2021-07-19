@@ -82,13 +82,13 @@ module.exports = {
         path: `${__dirname}/src/assets/`,
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `products`,
-    //     path: `${__dirname}/src/assets/products/`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `products`,
+        path: `${__dirname}/src/assets/products/`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

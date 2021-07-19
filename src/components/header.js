@@ -3,6 +3,7 @@ import styled from "styled-components"
 import PropTypes from "prop-types"
 import { StaticImage } from "gatsby-plugin-image"
 // import { Link } from "gatsby"
+// import HeroImage from "../assets/products/Poliweglan/zadaszenia-z-poliweglanu3.jpg"
 import { animationMoveY } from "../styles/Animation"
 
 const StyledTitle = styled.h1`
@@ -25,6 +26,10 @@ const StyledText = styled.div`
 
 const StyledHeader = styled.article`
   display: flex;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 
 const StyledHero = styled.div`
@@ -90,7 +95,7 @@ const Header = ({ siteTitle }) => {
           <StaticImage
             src="../assets/products/Poliweglan/zadaszenia-z-poliweglanu3.jpg"
             className="hero-image"
-            alt=""
+            alt="house"
           />
         </StyledHero>
       </StyledHeader>

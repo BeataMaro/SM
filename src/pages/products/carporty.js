@@ -1,8 +1,18 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import Seo from "../../components/seo"
 
-const carporty = () => {
+const Carporty = () => {
+  const {
+    allFile: { edges },
+  } = useStaticQuery(query)
+
+  const img1 = edges.map(({ node }) =>
+    console.log(node.childrenImageSharp[0].gatsbyImageData)
+  )
+
   return (
     <>
       <Seo title="Carporty" />
@@ -15,9 +25,31 @@ const carporty = () => {
           nagrzewaniem i jednocześnie zapewnia wytrzymałość na obciążenie
           śniegiem odpowiednią nawet dla rejonów górskich.
         </p>
+        {edges.map(({ node }) => (
+          <GatsbyImage
+            key={node.id}
+            image={node?.childrenImageSharp[0]?.gatsbyImageData}
+            alt=""
+          />
+        ))}
       </section>
     </>
   )
 }
 
-export default carporty
+export default Carporty
+
+export const query = graphql`
+  {
+    allFile(filter: { relativeDirectory: { eq: "products/Carporty" } }) {
+      edges {
+        node {
+          id
+          childrenImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
+      }
+    }
+  }
+`

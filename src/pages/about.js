@@ -1,8 +1,12 @@
 import React from "react"
-
+import { useStaticQuery, graphql } from "gatsby"
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import Seo from "../components/seo"
 
-const about = () => {
+const About = () => {
+  const { file } = useStaticQuery(query)
+  const aboutImg = getImage(file.childImageSharp)
+  console.log(aboutImg)
   return (
     <>
       <Seo title="o nas" />
@@ -17,9 +21,20 @@ const about = () => {
           miejsce w Austrii naszą misją jest dostarczanie klientom produktów i
           usług o bezkompromisowej jakości.
         </p>
+        <GatsbyImage image={aboutImg} alt="" />
       </section>
     </>
   )
 }
 
-export default about
+export default About
+
+export const query = graphql`
+  query myQuery {
+    file(relativeDirectory: { eq: "about" }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED)
+      }
+    }
+  }
+`
