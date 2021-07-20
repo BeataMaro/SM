@@ -1,4 +1,5 @@
 import React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 
 import Seo from "../../components/seo"
 
@@ -14,6 +15,10 @@ const ogrodyzimowe = () => {
           dosłownie w ciągu minuty ogrzeje twój taras. Możesz się nim cieszyć
           nawet wtedy, gdy aura nie zachęca do wychodzenia na zewnątrz.
         </p>
+        <StaticImage
+          src="../../assets/products/Ogrody-zimowe/ogrody-zimowe1.jpg"
+          alt=""
+        />
       </section>
     </>
   )
