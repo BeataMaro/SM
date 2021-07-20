@@ -86,6 +86,13 @@ module.exports = {
     // {
     //   resolve: `gatsby-source-filesystem`,
     //   options: {
+    //     name: `products`,
+    //     path: `${__dirname}/src/products/`,
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
     //     name: `style`,
     //     path: `${__dirname}/src/pages/products/`,
     //   },
