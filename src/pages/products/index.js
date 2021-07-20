@@ -3,16 +3,15 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import { Button } from "../../components/atoms/Button"
-import styles from "./StyledProducts"
-import Seo from "../../components/seo"
-
-const {
+import {
   StyledProducts,
   StyledCategory,
   StyledDescription,
   StyledH3,
   StyledThumbnail,
-} = styles
+} from "./StyledProducts"
+
+import Seo from "../../components/seo"
 
 const index = () => {
   return (

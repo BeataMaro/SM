@@ -1,12 +1,12 @@
 import styled from "styled-components"
 
-const StyledProducts = styled.div`
+export const StyledProducts = styled.div`
   margin-top: 3rem;
   display: grid;
   grid-gap: 3rem;
 `
 
-const StyledCategory = styled.article`
+export const StyledCategory = styled.article`
   width: 80%;
   min-height: 250px;
   display: flex;
@@ -23,7 +23,7 @@ const StyledCategory = styled.article`
   }
 `
 
-const StyledDescription = styled.div`
+export const StyledDescription = styled.div`
   height: 200px;
   display: grid;
   place-items: center;
@@ -34,26 +34,16 @@ const StyledDescription = styled.div`
   padding: 2.5rem 0;
   border: 1px solid ${({ theme }) => theme.colors.lightGrey};
 `
-const StyledH3 = styled.h3`
+export const StyledH3 = styled.h3`
   color: ${({ theme }) => theme.colors.grey};
   font-weight: 400;
   text-transform: uppercase;
   font-size: 2rem;
 `
 
-const StyledThumbnail = styled.div`
+export const StyledThumbnail = styled.div`
   height: 200px;
   width: 320px;
   padding: 1rem;
   border: 1px solid ${({ theme }) => theme.colors.lightGrey};
 `
-
-const styles = {
-  StyledProducts,
-  StyledCategory,
-  StyledDescription,
-  StyledH3,
-  StyledThumbnail,
-}
-
-export default styles
