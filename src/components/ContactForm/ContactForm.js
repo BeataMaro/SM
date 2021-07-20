@@ -31,7 +31,7 @@ const ContactForm = () => {
           name="message"
           rows="10"
           cols="10"
-          maxlength="250"
+          maxLength="250"
         />
         <ValidationError
           prefix="Message"
@@ -62,7 +62,7 @@ const ContactForm = () => {
         name="message"
         rows="10"
         cols="10"
-        maxlength="250"
+        maxLength="250"
       />
       <ValidationError prefix="Message" field="message" errors={state.errors} />
       <Button type="submit" disabled={state.submitting}>

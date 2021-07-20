@@ -83,6 +83,13 @@ module.exports = {
         path: `${__dirname}/src/assets/products/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `style`,
+        path: `${__dirname}/src/pages/products/style/`,
+      },
+    },
 
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
