@@ -3,12 +3,12 @@ import styled from "styled-components"
 export const Button = styled.button`
   margin: 1rem auto;
   background-color: ${({ empty, theme }) =>
-    empty ? "transparent" : theme.colors.orange};
+    empty ? "transparent" : theme.colors.main};
   color: ${({ empty, theme }) =>
-    empty ? theme.colors.orange : theme.colors.white};
+    empty ? theme.colors.main : theme.colors.white};
   padding: 0.5rem 1rem;
   border: 0.12em solid
-    ${({ empty, theme }) => (empty ? theme.colors.orange : theme.colors.orange)};
+    ${({ empty, theme }) => (empty ? theme.colors.main : theme.colors.main)};
 
   font-weight: 400;
   text-transform: capitalize;
@@ -53,9 +53,9 @@ export const Button = styled.button`
 
   &:hover {
     background-color: ${({ empty, theme }) =>
-      empty ? theme.colors.orange : theme.colors.black};
+      empty ? theme.colors.main : theme.colors.black};
     border-color: ${({ empty, theme }) =>
-      empty ? theme.colors.orange : theme.colors.black};
+      empty ? theme.colors.main : theme.colors.black};
     color: ${({ empty, theme }) =>
       empty ? theme.colors.white : theme.colors.white};
   }
