@@ -87,7 +87,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `style`,
-        path: `${__dirname}/src/pages/products/style/`,
+        path: `${__dirname}/src/pages/products/`,
       },
     },
 
