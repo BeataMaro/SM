@@ -24,7 +24,7 @@ const StyledContactPage = styled.section`
     }
 
     &:nth-of-type(1) {
-      border: 1px solid orange;
+      border: 1px solid main;
     }
     &:nth-of-type(2) {
       border: 1px solid blue;
