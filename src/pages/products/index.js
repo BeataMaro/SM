@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import { Button } from "../../components/atoms/Button"
-import styles from "./style/StyledProducts"
+import styles from "./StyledProducts"
 import Seo from "../../components/seo"
 
 const {
