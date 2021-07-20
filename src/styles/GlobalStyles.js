@@ -73,10 +73,6 @@ a {
   cursor: pointer;
   }
 }
-textarea {
-  resize: none;
-}
-
 .logo {
 
   max-width: 100%;

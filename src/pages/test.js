@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import { FormspreeProvider } from "@formspree/react"
-import ContactForm from "../components/ContactForm"
+import ContactForm from "../components/ContactForm/ContactForm"
 
 import Seo from "../components/seo"
 

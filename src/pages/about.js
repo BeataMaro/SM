@@ -1,6 +1,8 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
+
+import { Button } from "../components/atoms/Button"
 import Seo from "../components/seo"
 
 const About = () => {
@@ -21,6 +23,9 @@ const About = () => {
           miejsce w Austrii naszą misją jest dostarczanie klientom produktów i
           usług o bezkompromisowej jakości.
         </p>
+        <Link to="/products">
+          <Button empty>Oferta</Button>
+        </Link>
         <GatsbyImage image={aboutImg} alt="" />
       </section>
     </>

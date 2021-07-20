@@ -1,44 +1,9 @@
 import React from "react"
-import styled from "styled-components"
+
 import { useForm, ValidationError } from "@formspree/react"
 
-import { Button } from "../components/atoms/Button"
-
-const StyledForm = styled.form`
-  display: grid;
-  grid-gap: 0.5rem;
-  padding: 2rem;
-  color: ${({ theme }) => theme.colors.lightGrey};
-  background-color: ${({ theme }) => theme.colors.main};
-
-  input,
-  textarea {
-    border: none;
-    border-bottom: 1px solid ${({ theme }) => theme.colors.grey};
-    background-color: transparent;
-    color: ${({ theme }) => theme.colors.grey};
-    padding: 10px;
-
-    &:active {
-      outline: none;
-    }
-
-    &:focus {
-      outline: none;
-      border-color: ${({ theme }) => theme.colors.lightGrey};
-    }
-  }
-
-  input {
-    height: 2rem;
-  }
-
-  textarea {
-    width: 300px;
-    height: 150px;
-    border: 1px solid grey;
-  }
-`
+import { Button } from "../atoms/Button"
+import { StyledForm } from "./ContactFormStyle"
 
 const ContactForm = () => {
   const [state, handleSubmit] = useForm("ContactSelfMAX")
@@ -61,7 +26,13 @@ const ContactForm = () => {
         />
 
         <label htmlFor="message">Wiadomość</label>
-        <textarea id="message" name="message" />
+        <textarea
+          id="message"
+          name="message"
+          rows="10"
+          cols="10"
+          maxlength="250"
+        />
         <ValidationError
           prefix="Message"
           field="message"
@@ -86,7 +57,13 @@ const ContactForm = () => {
       <input id="phone" type="numeric" name="phone" />
       <ValidationError prefix="Phone" field="phone" errors={state.errors} />
       <label htmlFor="message">Wiadomość</label>
-      <textarea id="message" name="message" />
+      <textarea
+        id="message"
+        name="message"
+        rows="10"
+        cols="10"
+        maxlength="250"
+      />
       <ValidationError prefix="Message" field="message" errors={state.errors} />
       <Button type="submit" disabled={state.submitting}>
         Wyślij

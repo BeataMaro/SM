@@ -1,53 +1,37 @@
 import styled from "styled-components"
 
 export const StyledForm = styled.form`
-  flex: 1;
-  width: 50%;
-  margin: 2rem auto;
-  padding: 0.5rem 1rem;
-  color: ${({ theme }) => theme.colors.greenGrey};
-  display: flex;
-  flex-direction: column;
-  font-family: ${({ theme }) => theme.fonts.saira};
-  background-color: ${({ theme }) => theme.colors.black};
-
-  @media (max-width: 768px) {
-    width: 100%;
-  }
+  display: grid;
+  grid-gap: 0.5rem;
+  padding: 2rem;
+  color: ${({ theme }) => theme.colors.lightGrey};
+  background-color: ${({ theme }) => theme.colors.darkGrey};
 
   input,
   textarea {
-    padding: 0.5rem;
-    color: ${({ theme }) => theme.colors.white};
-    border: 1px solid ${({ theme }) => theme.colors.greenGrey};
+    border: none;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.grey};
     background-color: transparent;
-  }
+    color: ${({ theme }) => theme.colors.grey};
+    padding: 10px;
 
-  input:focus,
-  textarea:focus {
-    border: 1px solid ${({ theme }) => theme.colors.white};
-    outline: none;
-  }
-  label {
-    position: relative;
-    text-align: left;
+    &:active {
+      outline: none;
+    }
 
-    &:not([for="phone"])::after {
-      display: inline-block;
-      position: absolute;
-      bottom: 0;
-      right: 1rem;
-      content: "*";
-      font-size: 1.5rem;
+    &:focus {
+      outline: none;
+      border-color: ${({ theme }) => theme.colors.lightGrey};
     }
   }
-`
 
-export const StyledField = styled.div`
-  display: grid;
-`
+  input {
+    height: 2rem;
+  }
 
-export const StyledInfo = styled(StyledField)`
-  height: 2rem;
-  color: ${({ error }) => (error ? "red" : "green")};
+  textarea {
+    resize: none;
+    border: 1px solid grey;
+    border-radius: 3px;
+  }
 `

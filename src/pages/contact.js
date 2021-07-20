@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react"
-import ContactForm from "../components/ContactForm"
+import ContactForm from "../components/ContactForm/ContactForm"
 import styled from "styled-components"
 import { FormspreeProvider } from "@formspree/react"
 

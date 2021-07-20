@@ -9,7 +9,7 @@ const Carporty = () => {
     allFile: { edges },
   } = useStaticQuery(query)
 
-  const img1 = edges.map(({ node }) =>
+  edges.map(({ node }) =>
     console.log(node.childrenImageSharp[0].gatsbyImageData)
   )
 

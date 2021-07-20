@@ -8,11 +8,21 @@ import { animationMoveY } from "../styles/Animation"
 
 const StyledTitle = styled.h1`
   margin-left: 3rem;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 120%;
+    width: 50%;
+    height: 1px;
+    background: ${({ theme }) => theme.colors.grey};
+  }
 `
 
 const StyledText = styled.div`
-  /* background-color: orangered; */
-  padding: 3rem;
+  padding: 2rem 3rem;
 
   p {
     color: ${({ theme }) => theme.colors.grey};
