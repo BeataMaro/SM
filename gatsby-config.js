@@ -90,13 +90,6 @@ module.exports = {
     //     path: `${__dirname}/src/products/`,
     //   },
     // },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `style`,
-    //     path: `${__dirname}/src/pages/products/`,
-    //   },
-    // },
 
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
