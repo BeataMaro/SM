@@ -5,15 +5,18 @@ export const StyledNavlist = styled.ul`
   align-items: center;
   justify-content: flex-end;
 
-  /* @media (max-width: 768px) {
+  @media (max-width: 768px) {
     flex-direction: column;
-  } */
+    text-align: center;
+    padding: 3rem;
+  }
 
   li {
     position: relative;
     width: 100%;
     transition: all 0.5s ease-in;
     border-bottom: 0.4px solid transparent;
+    margin-right: 1rem;
 
     @media (max-width: 768px) {
       padding: 1rem;
@@ -90,5 +93,11 @@ export const StyledNavlist = styled.ul`
         display: block;
       }
     }
+  }
+`
+
+export const StyledIcon = styled.div`
+  @media (max-width: 768px) {
+    display: none;
   }
 `

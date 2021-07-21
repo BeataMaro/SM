@@ -66,6 +66,7 @@ ul {
 }
 a {
   text-decoration: none;
+  color: inherit;
 
 :hover {
   text-decoration: none;

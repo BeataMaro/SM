@@ -10,7 +10,7 @@ export const StyledNavigation = styled.nav`
   position: sticky;
   top: 0;
   width: 100%;
-  padding: 0 1.5rem;
+  padding: 0 2.5rem;
   height: 12vh;
   display: flex;
   justify-content: space-between;

@@ -11,7 +11,7 @@ import Seo from "../components/seo"
 const StyledContactPage = styled.section`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* grid-template-rows: repeat(2, 1fr); */
+  grid-template-rows: repeat(2, 1fr);
 
   article {
     @media (max-width: 768px) {
@@ -19,15 +19,14 @@ const StyledContactPage = styled.section`
     }
 
     &:nth-of-type(1) {
-      border: 1px solid green;
       grid-column: 1 / 3;
     }
     &:nth-of-type(2) {
-      border: 1px solid blue;
+      display: grid;
+      place-items: center;
       grid-column: 3 / 5;
     }
     &:nth-of-type(3) {
-      border: 1px solid yellow;
       grid-column: 1 / -1;
     }
   }
