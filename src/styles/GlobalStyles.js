@@ -85,6 +85,14 @@ a {
   
 }
 
+.section-title {
+    width: 100%;
+  color: ${({ theme }) => theme.colors.lightGrey};
+  background-color: ${({ theme }) => theme.colors.grey};
+  padding: 2rem;
+  letter-spacing: 3px;
+}
+
 .image {
   max-width: 100%;
 }

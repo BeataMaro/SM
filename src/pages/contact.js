@@ -2,12 +2,10 @@ import React, { useEffect, useRef } from "react"
 import ContactForm from "../components/ContactForm/ContactForm"
 import styled from "styled-components"
 import { FormspreeProvider } from "@formspree/react"
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faFacebookF } from "@fortawesome/free-brands-svg-icons"
-import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons"
-
 import { animationMoveY } from "../styles/Animation"
+
+import ContactInfo from "../components/ContactInfo"
+import GoogleMaps from "../components/GoogleMaps"
 import Seo from "../components/seo"
 
 const StyledContactPage = styled.section`
@@ -41,13 +39,6 @@ const StyledContactPage = styled.section`
     grid-template-columns: 1fr;
   } */
 `
-const StyledTitle = styled.h2`
-  width: 100%;
-  color: ${({ theme }) => theme.colors.lightGrey};
-  background-color: ${({ theme }) => theme.colors.grey};
-  padding: 2rem;
-  letter-spacing: 3px;
-`
 
 const Contact = () => {
   const sectionRef = useRef(null)
@@ -58,36 +49,16 @@ const Contact = () => {
   return (
     <>
       <Seo title="Kontakt" />
-      <section>
-        <StyledTitle>Kontakt</StyledTitle>
+      <section ref={sectionRef}>
+        <h2 className="section-title">Kontakt</h2>
         <StyledContactPage ref={sectionRef}>
           <article>
             <FormspreeProvider project="1723153946022771743">
               <ContactForm />
             </FormspreeProvider>
           </article>
-          <article>
-            <p>
-              <a
-                href="https://www.facebook.com/SelfmaxPolska"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FontAwesomeIcon icon={faFacebookF} /> @SelfmaxPolska
-              </a>
-            </p>
-            <p>Dariusz Łakomski</p>
-            <p>
-              <FontAwesomeIcon icon={faPhone} />
-              +48 503 696 926
-            </p>
-            <p>
-              <FontAwesomeIcon icon={faEnvelope} /> dariusz@lakomski.pl
-            </p>
-          </article>
-          <article>
-            Mapy Googla: Niedersulzerstraße 2, 2225 Loidesthal, Austria
-          </article>
+          <ContactInfo />
+          <GoogleMaps />
         </StyledContactPage>
       </section>
     </>

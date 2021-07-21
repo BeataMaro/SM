@@ -8,7 +8,7 @@ const index = () => {
     <>
       <Seo title="Produkty" />
       <section>
-        <h2>Nasza oferta</h2>
+        <h2 className="section-title">Nasza oferta</h2>
         <ProductsList />
       </section>
     </>

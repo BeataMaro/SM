@@ -13,7 +13,7 @@ const About = () => {
     <>
       <Seo title="o nas" />
       <section>
-        <h2>O nas</h2>
+        <h2 className="section-title">O nas</h2>
         <p>
           Selfmax doskonali się w montażu zadaszeń aluminiowych od 2001 roku. Ze
           względu na silny, a przede wszystkim szybki rozwój firmy, nasza
