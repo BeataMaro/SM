@@ -30,6 +30,7 @@
     "gatsby-source-graphql": "^3.9.0",
     "gatsby-transformer-remark": "^4.6.0",
     "gatsby-transformer-sharp": "^3.9.0",
+    "google-map-react": "^2.1.10",
     "gsap": "^3.7.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",

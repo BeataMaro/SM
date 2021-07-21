@@ -10,34 +10,27 @@ import Seo from "../components/seo"
 
 const StyledContactPage = styled.section`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-rows: repeat(2, 1fr); */
 
-  svg {
-    color: black;
-    font-size: 1rem;
-  }
   article {
     @media (max-width: 768px) {
       grid-column: 1 / -1;
     }
 
     &:nth-of-type(1) {
-      border: 1px solid main;
+      border: 1px solid green;
+      grid-column: 1 / 3;
     }
     &:nth-of-type(2) {
       border: 1px solid blue;
-
-      @media (min-width: 968px) {
-      }
+      grid-column: 3 / 5;
     }
     &:nth-of-type(3) {
       border: 1px solid yellow;
+      grid-column: 1 / -1;
     }
   }
-
-  /* @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  } */
 `
 
 const Contact = () => {
