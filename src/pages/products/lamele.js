@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 import Seo from "../../components/seo"
 
@@ -7,6 +8,7 @@ const lamele = () => {
     <>
       <Seo title="Lamele" />
       <section>
+        <Link to="/products">Oferta</Link>
         <h2>Lamele</h2>
         <p>
           Zadaszenie z poszyciem z lameli to najbardziej funkcjonalne i

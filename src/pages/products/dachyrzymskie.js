@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 import Seo from "../../components/seo"
 
@@ -7,6 +8,7 @@ const dachyrzymskie = () => {
     <>
       <Seo title="Dachy Rzymskie" />
       <section>
+        <Link to="/products">Oferta</Link>
         <h2>Dachy rzymskie</h2>
         <p>
           Szczególnie polecane na lato, otwierane i zamykane zdalnie. Poszycie

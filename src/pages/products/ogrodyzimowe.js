@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Seo from "../../components/seo"
@@ -8,6 +9,7 @@ const ogrodyzimowe = () => {
     <>
       <Seo title="ogrody zimowe" />
       <section>
+        <Link to="/products">Oferta</Link>
         <h2>Ogrody zimowe</h2>
         <p>
           Najlepszy sposób na przedłużenie sezonu letniego. W ogrodzie zimowym

@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 import Seo from "../../components/seo"
@@ -17,6 +17,7 @@ const Carporty = () => {
     <>
       <Seo title="Carporty" />
       <section>
+        <Link to="/products">Oferta</Link>
         <h2>Carporty</h2>
         <p>
           Wjazd o szerokości do 7,5 m bez konieczności wstawiania dodatkowych
