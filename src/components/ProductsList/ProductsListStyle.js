@@ -3,12 +3,12 @@ import styled from "styled-components"
 export const StyledProducts = styled.div`
   margin-top: 3rem;
   display: grid;
-  grid-gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
 `
 
 export const StyledCategory = styled.article`
-  width: 80%;
-  min-height: 250px;
+  /* width: 80%; */
+  height: 250px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,17 +33,22 @@ export const StyledDescription = styled.div`
   transition: all 0.2s ease-in;
   padding: 2.5rem 0;
   border: 1px solid ${({ theme }) => theme.colors.lightGrey};
+  z-index: 2;
 `
 export const StyledH3 = styled.h3`
   color: ${({ theme }) => theme.colors.grey};
   font-weight: 400;
   text-transform: uppercase;
-  font-size: 2rem;
 `
 
 export const StyledThumbnail = styled.div`
-  height: 200px;
-  width: 320px;
+  /* height: 200px;
+  width: 320px; */
   padding: 1rem;
   border: 1px solid ${({ theme }) => theme.colors.lightGrey};
+  z-index: 1;
+  transition: 0.2s ease-in;
+  &:hover {
+    opacity: 0.8;
+  }
 `

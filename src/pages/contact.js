@@ -5,7 +5,7 @@ import { FormspreeProvider } from "@formspree/react"
 import { animationMoveY } from "../styles/Animation"
 
 import ContactInfo from "../components/ContactInfo"
-import GoogleMaps from "../components/GoogleMaps"
+import Map from "../components/Map"
 import Seo from "../components/seo"
 
 const StyledContactPage = styled.section`
@@ -50,7 +50,7 @@ const Contact = () => {
             </FormspreeProvider>
           </article>
           <ContactInfo />
-          <GoogleMaps />
+          <Map />
         </StyledContactPage>
       </section>
     </>

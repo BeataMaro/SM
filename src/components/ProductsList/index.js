@@ -15,17 +15,17 @@ const ProductsList = () => {
   return (
     <StyledProducts>
       <StyledCategory>
-        <StyledDescription>
-          <StyledH3>Ogrody Zimowe</StyledH3>
-          <Link to="/products/ogrodyzimowe">
-            <Button>Sprawdź</Button>
-          </Link>
-        </StyledDescription>
         <StyledThumbnail>
           <StaticImage
             src="../../assets/products/Ogrody-zimowe/ogrody-zimowe1.jpg"
             alt=""
           />
+          <StyledDescription>
+            <StyledH3>Ogrody Zimowe</StyledH3>
+            <Link to="/products/ogrodyzimowe">
+              <Button>Sprawdź</Button>
+            </Link>
+          </StyledDescription>
         </StyledThumbnail>
       </StyledCategory>
       <StyledCategory>

@@ -2,6 +2,9 @@ import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons"
+
 import Seo from "../../components/seo"
 
 const Carporty = () => {
@@ -17,7 +20,10 @@ const Carporty = () => {
     <>
       <Seo title="Carporty" />
       <section>
-        <Link to="/products">Oferta</Link>
+        <Link to="/products">
+          <FontAwesomeIcon icon={faChevronLeft} />
+          <span>Wróć</span>
+        </Link>
         <h2>Carporty</h2>
         <p>
           Wjazd o szerokości do 7,5 m bez konieczności wstawiania dodatkowych

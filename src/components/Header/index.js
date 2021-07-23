@@ -1,56 +1,20 @@
 import React, { useEffect, useRef } from "react"
-import styled from "styled-components"
-import PropTypes from "prop-types"
-import { StaticImage } from "gatsby-plugin-image"
-// import { Link } from "gatsby"
-// import HeroImage from "../assets/products/Poliweglan/zadaszenia-z-poliweglanu3.jpg"
-import { animationMoveY } from "../styles/Animation"
+import { graphql, useStaticQuery } from "gatsby"
 
-const StyledTitle = styled.h1`
-  margin-left: 3rem;
-  position: relative;
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { animationMoveY } from "../../styles/Animation"
+import {
+  StyledTitle,
+  StyledText,
+  StyledHeader,
+  StyledHero,
+} from "./HeaderStyle"
 
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 120%;
-    width: 50%;
-    height: 1px;
-    background: ${({ theme }) => theme.colors.grey};
-  }
-`
+const Header = () => {
+  const { file } = useStaticQuery(heroImage)
+  const image = getImage(file.childImageSharp)
+  console.log(image)
 
-const StyledText = styled.div`
-  padding: 2rem 3rem;
-
-  p {
-    color: ${({ theme }) => theme.colors.grey};
-    line-height: 32px;
-
-    strong {
-      font-weight: 400;
-    }
-  }
-`
-
-const StyledHeader = styled.article`
-  display: flex;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-`
-
-const StyledHero = styled.div`
-  width: 100%;
-  height: 100%;
-  .hero-image {
-    max-width: 100%;
-  }
-`
-
-const Header = ({ siteTitle }) => {
   const sloganRef = useRef(null)
 
   useEffect(() => {
@@ -60,13 +24,13 @@ const Header = ({ siteTitle }) => {
 
   return (
     <header>
-      {/* <h1 ref={sloganRef}>
-        <Link to="/">{siteTitle}</Link>
-      </h1> */}
-      <StyledTitle>
+      <StyledTitle ref={sloganRef}>
         Witaj na stronie <strong>Selfmax</strong>!
       </StyledTitle>
       <StyledHeader>
+        <StyledHero>
+          <GatsbyImage image={image} alt="" />
+        </StyledHero>
         <StyledText>
           <p>
             Znajdziesz tutaj zakres naszej oferty oraz przykładowe realizacje.
@@ -101,26 +65,23 @@ const Header = ({ siteTitle }) => {
             z instruktażem.
           </p>
         </StyledText>
-        <StyledHero>
-          <StaticImage
-            src="../assets/products/Poliweglan/zadaszenia-z-poliweglanu3.jpg"
-            className="hero-image"
-            alt="house"
-          />
-        </StyledHero>
       </StyledHeader>
     </header>
   )
 }
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
 export default Header
+
+export const heroImage = graphql`
+  {
+    file(
+      relativePath: { eq: "products/Poliweglan/zadaszenia-z-poliweglanu3.jpg" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED)
+      }
+    }
+  }
+`
 
 // Photo by <a href="https://unsplash.com/@jonasjaekenmedia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jonas Jaeken</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
